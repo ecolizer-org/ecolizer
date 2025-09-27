@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Fade in animation on scroll
+    // Enhanced fade in animation on scroll with stagger
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -65,7 +65,52 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(el);
     });
 
-    // Contact form handling
+    // Stagger animation for service and project cards
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const cards = entry.target.querySelectorAll('.card');
+                cards.forEach((card, index) => {
+                    card.classList.add('card-stagger');
+                    setTimeout(() => {
+                        card.classList.add('visible');
+                    }, index * 100);
+                });
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Observe card containers
+    document.querySelectorAll('#services .row, #projects .row').forEach(container => {
+        cardObserver.observe(container);
+    });
+
+    // Particle effect for hero section
+    function createParticles() {
+        const heroSection = document.querySelector('.hero-section');
+        for (let i = 0; i < 50; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 10 + 's';
+            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            heroSection.appendChild(particle);
+        }
+    }
+
+    createParticles();
+
+    // Parallax effect
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const parallaxElements = document.querySelectorAll('.parallax');
+        parallaxElements.forEach(el => {
+            const rate = scrolled * -0.5;
+            el.style.transform = `translateY(${rate}px)`;
+        });
+    });
+
+    // Contact form handling with animation
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -76,29 +121,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Simple form validation
             if (name && email && message) {
-                alert('Thank you for your message! We\'ll get back to you soon.');
-                contactForm.reset();
+                // Add success animation
+                contactForm.style.animation = 'pulse 0.5s ease';
+                setTimeout(() => {
+                    alert('Thank you for your message! We\'ll get back to you soon.');
+                    contactForm.reset();
+                    contactForm.style.animation = '';
+                }, 500);
             } else {
                 alert('Please fill in all fields.');
             }
         });
     }
 
-    // Navbar background change on scroll
+    // Navbar background change on scroll with blur
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
             navbar.classList.add('navbar-scrolled');
+            navbar.style.backdropFilter = 'blur(20px)';
         } else {
             navbar.classList.remove('navbar-scrolled');
+            navbar.style.backdropFilter = 'blur(10px)';
         }
     });
 
-    // Crow mascot follows scroll slightly
+    // Crow mascot follows scroll slightly with enhanced movement
     window.addEventListener('scroll', function() {
         const scrolled = window.pageYOffset;
         const rate = scrolled * -0.5;
-        crowMascot.style.transform = `translateY(${rate}px)`;
+        crowMascot.style.transform = `translateY(${rate}px) rotate(${scrolled * 0.01}deg)`;
+    });
+
+    // Add hover effects to cards
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) scale(1)';
+        });
     });
 
     // Initialize crow tooltip
