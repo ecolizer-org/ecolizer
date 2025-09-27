@@ -134,16 +134,39 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Navbar background change on scroll with blur
-    const navbar = document.querySelector('.navbar');
+    // Navbar background change on scroll with blur and animations
+    const navbar = document.querySelector('.modern-navbar');
+    const navLinks = document.querySelectorAll('.modern-nav-link');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
             navbar.classList.add('navbar-scrolled');
-            navbar.style.backdropFilter = 'blur(20px)';
+            navbar.style.backdropFilter = 'blur(25px)';
+            navbar.style.transform = 'translateY(0)';
         } else {
             navbar.classList.remove('navbar-scrolled');
-            navbar.style.backdropFilter = 'blur(10px)';
+            navbar.style.backdropFilter = 'blur(20px)';
+            navbar.style.transform = 'translateY(0)';
         }
+    });
+
+    // Add active class to nav links on scroll
+    const allSections = document.querySelectorAll('section');
+    window.addEventListener('scroll', function() {
+        let current = '';
+        allSections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
     });
 
     // Crow mascot follows scroll slightly with enhanced movement
