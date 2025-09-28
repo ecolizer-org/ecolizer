@@ -1,11 +1,64 @@
-# TODO: Update Website Content with PDF Data
+# TODO: Enhance Ecolizer Website Pages
 
-- [x] Update Hero section: Change title to "Restoring the Rhythm" and description to mission/vision.
-- [x] Update About section: Replace text with mission, vision, and company history (since 2020, working with 22+ ULBs).
-- [x] Update Services section: Update cards to Workforce Management, IoT-based collection, Maximum Value Extraction.
-- [x] Update Projects section: Replace with real projects like Operations & Management of Wealth Centres, Trashback, Capacity Building, Beach Clean-ups.
-- [x] Update Team section: Update to Soubhagya Chandra Biswal as Founder/CEO.
-- [x] Update Contact section: Update address (Cuttack, Odisha), phone (8093738918), email (soubhagyachandrabiswal@gmail.com).
-- [x] Update Footer: Update copyright to 2024.
-- [x] Integrate contact form with formsubmit.co to collect data via email.
-- [x] Test the website by opening index.html in a browser.
+## Overview
+Enhance all pages except home.html with better attractive contents and good modern UI designs. Leverage existing modern CSS for animations, glassmorphism, and responsive design.
+
+## Tasks
+
+### 1. Enhance about.html
+- [x] Add History section with timeline
+- [x] Add Core Values section with icons
+- [x] Expand Achievements with animated counters
+- [x] Add Team Overview section
+- [x] Use appropriate images from /images/
+
+### 2. Enhance services.html
+- [x] Expand each service with detailed descriptions
+- [x] Add Benefits subsections
+- [x] Add Process/How It Works section
+- [x] Add Call-to-Action for each service
+- [x] Use unique icons and better layout
+
+### 3. Enhance projects.html
+- [x] Assign unique images to each project
+- [x] Add Outcomes/Results for each project
+- [x] Add Timelines or Key Metrics
+- [x] Add more projects if possible
+- [x] Improve card layouts with hover effects
+
+### 4. Enhance team.html
+- [x] Add more team members (at least 4-5)
+- [x] Include bios, roles, and photos
+- [x] Add social links or contact info
+- [x] Use team-related images
+
+### 5. Enhance testimonials.html
+- [x] Replace generic testimonials with specific ones
+- [x] Add client logos or photos
+- [x] Add more testimonials (6-8)
+- [x] Include ratings or specific details
+
+### 6. Enhance blogs.html
+- [x] Add more blog posts (8-10)
+- [x] Add categories/tags
+- [x] Include author info
+- [x] Add read time estimates
+- [x] Use relevant images
+
+### 7. Enhance contact.html
+- [x] Add FAQ section
+- [x] Add Office Hours
+- [x] Improve map embed
+- [x] Add Social Media links prominently
+- [x] Add Contact Cards for different departments
+
+### 8. Update CSS/JS if needed
+- [x] Add any new styles for enhanced elements
+- [x] Ensure animations and modern UI elements work
+- [x] Test responsiveness
+
+### 9. Testing
+- [ ] Check all pages load correctly
+- [ ] Verify modern UI elements (animations, hover effects)
+- [ ] Test responsiveness on different screen sizes
+- [ ] Validate content accuracy

@@ -39,55 +39,184 @@
         </div>
     </nav>
 
+    <!-- Blogs Hero -->
+    <section id="blogs-hero" class="py-5 bg-light section-transition">
+        <div class="container">
+            <h1 class="text-center display-4 fw-bold text-success mb-4">Latest Insights</h1>
+            <p class="text-center lead">Stay updated with the latest trends, innovations, and stories from the world of sustainable waste management.</p>
+        </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section id="blog-categories" class="py-3 section-transition">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <button class="btn btn-outline-success me-2 mb-2 category-btn active" data-category="all">All</button>
+                    <button class="btn btn-outline-success me-2 mb-2 category-btn" data-category="waste-management">Waste Management</button>
+                    <button class="btn btn-outline-success me-2 mb-2 category-btn" data-category="sustainability">Sustainability</button>
+                    <button class="btn btn-outline-success me-2 mb-2 category-btn" data-category="technology">Technology</button>
+                    <button class="btn btn-outline-success me-2 mb-2 category-btn" data-category="community">Community</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Blogs Section -->
     <section id="blogs" class="py-5 section-transition">
         <div class="container">
-            <h2 class="text-center mb-5">Latest Blogs</h2>
             <div class="row">
-                <div class="col-md-6 mb-4">
-                    <div class="card">
+                <div class="col-md-6 mb-4 blog-post" data-category="waste-management">
+                    <div class="card blog-card">
                         <img src="images/metting_with_municipalty.jpg" class="card-img-top blog-card-img" alt="Meeting with municipality">
                         <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="badge bg-success me-2">Waste Management</span>
+                                <span class="text-muted"><i class="fas fa-clock"></i> 5 min read</span>
+                            </div>
                             <h5 class="card-title">Sustainable Waste Management in Odisha</h5>
-                            <p class="text-muted">October 15, 2024</p>
                             <p class="card-text">Explore how Ecolizer is revolutionizing waste management practices in Odisha, working with 22+ Urban Local Bodies to ensure efficient and eco-friendly solutions.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
+                            <div class="blog-author">
+                                <small class="text-muted">By Soubhagya Chandra Biswal • October 15, 2024</small>
+                            </div>
+                            <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#blogModal1">Read More</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card">
+                <div class="col-md-6 mb-4 blog-post" data-category="technology">
+                    <div class="card blog-card">
                         <img src="images/waste_load_operation_on_truck.jpg" class="card-img-top blog-card-img" alt="Waste load operation">
-                        <div class="card-title">The Impact of IoT in Waste Collection</div>
                         <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="badge bg-info me-2">Technology</span>
+                                <span class="text-muted"><i class="fas fa-clock"></i> 4 min read</span>
+                            </div>
                             <h5 class="card-title">The Impact of IoT in Waste Collection</h5>
-                            <p class="text-muted">September 28, 2024</p>
                             <p class="card-text">Discover how IoT technology is transforming door-to-door waste collection, improving efficiency and reducing environmental impact.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
+                            <div class="blog-author">
+                                <small class="text-muted">By Rajesh Kumar • September 28, 2024</small>
+                            </div>
+                            <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#blogModal2">Read More</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card">
+                <div class="col-md-6 mb-4 blog-post" data-category="community">
+                    <div class="card blog-card">
                         <img src="images/fun_moment_with_team.jpg" class="card-img-top blog-card-img" alt="Fun moment with team">
                         <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="badge bg-warning me-2">Community</span>
+                                <span class="text-muted"><i class="fas fa-clock"></i> 6 min read</span>
+                            </div>
                             <h5 class="card-title">Empowering Women in Waste Management</h5>
-                            <p class="text-muted">August 12, 2024</p>
                             <p class="card-text">Learn about our initiatives to empower SHG women by providing them with managerial roles and entrepreneurship opportunities in the waste sector.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
+                            <div class="blog-author">
+                                <small class="text-muted">By Anita Patel • August 12, 2024</small>
+                            </div>
+                            <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#blogModal3">Read More</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="card">
+                <div class="col-md-6 mb-4 blog-post" data-category="sustainability">
+                    <div class="card blog-card">
                         <img src="images/seminar.jpg" class="card-img-top blog-card-img" alt="Seminar">
                         <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="badge bg-primary me-2">Sustainability</span>
+                                <span class="text-muted"><i class="fas fa-clock"></i> 3 min read</span>
+                            </div>
                             <h5 class="card-title">Beach Cleanup Initiatives for Ocean Health</h5>
-                            <p class="text-muted">July 5, 2024</p>
-                            <p class="card-text">Our collaborations with organizations for beach cleanup drives targeting ocean-bound plastics and promoting coastal environmental health.</p>
-                            <a href="#" class="btn btn-primary">Read More</a>
+                            <p class="card-text">Our collaborations with organizations on beach cleanup drives targeted at ocean-bound plastics and promoting coastal environmental health.</p>
+                            <div class="blog-author">
+                                <small class="text-muted">By Priya Sharma • July 5, 2024</small>
+                            </div>
+                            <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#blogModal4">Read More</button>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-6 mb-4 blog-post" data-category="waste-management">
+                    <div class="card blog-card">
+                        <img src="images/working_with_waste.jpg" class="card-img-top blog-card-img" alt="Working with waste">
+                        <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="badge bg-success me-2">Waste Management</span>
+                                <span class="text-muted"><i class="fas fa-clock"></i> 7 min read</span>
+                            </div>
+                            <h5 class="card-title">Circular Economy: Turning Waste into Wealth</h5>
+                            <p class="card-text">How our 90% material recovery process contributes to the circular economy, reducing landfill waste and creating economic value from discarded materials.</p>
+                            <div class="blog-author">
+                                <small class="text-muted">By Soubhagya Chandra Biswal • June 20, 2024</small>
+                            </div>
+                            <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#blogModal5">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 blog-post" data-category="technology">
+                    <div class="card blog-card">
+                        <img src="images/waste_loaded_truck_for_recycle.jpg" class="card-img-top blog-card-img" alt="Waste loaded truck">
+                        <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="badge bg-info me-2">Technology</span>
+                                <span class="text-muted"><i class="fas fa-clock"></i> 5 min read</span>
+                            </div>
+                            <h5 class="card-title">Smart Waste Management: Future of Urban Sanitation</h5>
+                            <p class="card-text">Exploring the future of waste management with AI, machine learning, and advanced analytics for predictive maintenance and optimized collection routes.</p>
+                            <div class="blog-author">
+                                <small class="text-muted">By Rajesh Kumar • May 15, 2024</small>
+                            </div>
+                            <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#blogModal6">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 blog-post" data-category="community">
+                    <div class="card blog-card">
+                        <img src="images/with_ground_members_photo.jpg" class="card-img-top blog-card-img" alt="With ground members">
+                        <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="badge bg-warning me-2">Community</span>
+                                <span class="text-muted"><i class="fas fa-clock"></i> 4 min read</span>
+                            </div>
+                            <h5 class="card-title">Building Resilient Communities Through Waste Management</h5>
+                            <p class="card-text">How effective waste management practices contribute to community resilience, public health, and sustainable development in Odisha's urban areas.</p>
+                            <div class="blog-author">
+                                <small class="text-muted">By Anita Patel • April 10, 2024</small>
+                            </div>
+                            <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#blogModal7">Read More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4 blog-post" data-category="sustainability">
+                    <div class="card blog-card">
+                        <img src="images/contract_signs.jpg" class="card-img-top blog-card-img" alt="Contract signs">
+                        <div class="card-body">
+                            <div class="blog-meta mb-2">
+                                <span class="badge bg-primary me-2">Sustainability</span>
+                                <span class="text-muted"><i class="fas fa-clock"></i> 6 min read</span>
+                            </div>
+                            <h5 class="card-title">Plastic Waste: Challenges and Solutions in Odisha</h5>
+                            <p class="card-text">Addressing the plastic waste crisis in Odisha through innovative recycling technologies, policy advocacy, and community education programs.</p>
+                            <div class="blog-author">
+                                <small class="text-muted">By Priya Sharma • March 25, 2024</small>
+                            </div>
+                            <button class="btn btn-success mt-3" data-bs-toggle="modal" data-bs-target="#blogModal8">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="newsletter" class="py-5 bg-light section-transition">
+        <div class="container text-center">
+            <h2 class="mb-4">Stay Updated</h2>
+            <p class="lead mb-4">Subscribe to our newsletter for the latest insights on sustainable waste management.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-success">Subscribe</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -112,5 +241,177 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        // Blog filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryBtns = document.querySelectorAll('.category-btn');
+            const blogPosts = document.querySelectorAll('.blog-post');
+
+            categoryBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+
+                    // Update active button
+                    categoryBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Filter posts
+                    blogPosts.forEach(post => {
+                        if (category === 'all' || post.getAttribute('data-category') === category) {
+                            post.style.display = 'block';
+                        } else {
+                            post.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+    <!-- Blog Modals -->
+    <div class="modal fade" id="blogModal1" tabindex="-1" aria-labelledby="blogModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="blogModal1Label">Sustainable Waste Management in Odisha</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/metting_with_municipalty.jpg" class="img-fluid mb-3" alt="Meeting with municipality">
+                    <p>In the heart of Odisha, Ecolizer is pioneering sustainable waste management solutions that are reshaping urban landscapes. Partnering with over 22 Urban Local Bodies (ULBs), we deliver comprehensive services including door-to-door collection, advanced sorting, and 90% material recovery rates. Our eco-friendly approaches not only streamline waste handling but also minimize environmental impact, helping municipalities achieve compliance with national sustainability mandates while cutting operational costs by up to 30%.</p>
+                    <p>Through strategic collaborations and hands-on training sessions, we empower local teams with cutting-edge tools and knowledge. Imagine transforming your city's waste challenges into opportunities for green innovation—Ecolizer makes it possible. Our proven track record in Odisha demonstrates scalable, cost-effective solutions tailored to your needs. Contact us today to discuss how we can support your urban waste management goals.</p>
+                    <p>Key Benefits for Clients: Reduced landfill dependency, enhanced public health, and revenue generation from recyclables. Join the ranks of satisfied ULBs driving Odisha towards a zero-waste future.</p>
+                    <small class="text-muted">By Soubhagya Chandra Biswal • October 15, 2024</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="blogModal2" tabindex="-1" aria-labelledby="blogModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="blogModal2Label">The Impact of IoT in Waste Collection</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/waste_load_operation_on_truck.jpg" class="img-fluid mb-3" alt="Waste load operation">
+                    <p>At Ecolizer, we're harnessing the power of Internet of Things (IoT) to redefine waste collection efficiency. Our smart vehicles, fitted with real-time sensors and GPS, dynamically optimize routes based on waste volume and traffic patterns, ensuring 95% on-time collections. This technology slashes fuel use by 25% and lowers carbon footprints, making your operations greener and more cost-effective.</p>
+                    <p>Integrated with mobile apps for residents, our IoT system provides schedule alerts and feedback loops, fostering community engagement. For municipalities and businesses, this means predictive analytics for maintenance, reduced downtime, and data insights to refine waste strategies. Ecolizer's IoT solutions are battle-tested in Odisha's diverse urban settings—ready to elevate your waste management to the next level.</p>
+                    <p>Client Advantages: Streamlined logistics, lower costs, and measurable sustainability metrics. Partner with us to implement IoT-driven waste solutions that attract eco-conscious stakeholders and boost your green credentials.</p>
+                    <small class="text-muted">By Rajesh Kumar • September 28, 2024</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="blogModal3" tabindex="-1" aria-labelledby="blogModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="blogModal3Label">Empowering Women in Waste Management</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/fun_moment_with_team.jpg" class="img-fluid mb-3" alt="Fun moment with team">
+                    <p>Ecolizer is committed to gender-inclusive waste management, empowering over 500 women through Self-Help Groups (SHGs) in Odisha. Our initiatives equip them with hands-on training in waste segregation, recycling operations, and business management, enabling them to lead collection teams and launch eco-enterprises. This approach not only generates sustainable livelihoods but also promotes social equity, with participants earning 20-30% above local averages.</p>
+                    <p>From workshops on safety protocols to microfinance linkages for scaling operations, our programs build resilient female-led networks. For clients, partnering with us means accessing a diverse, skilled workforce that enhances project outcomes and community buy-in. Ecolizer's model has transformed lives and waste systems—let's collaborate to bring empowerment to your region.</p>
+                    <p>Benefits for Partners: Diverse teams for better innovation, community goodwill, and compliance with CSR gender goals. Invest in women-powered waste solutions with Ecolizer today.</p>
+                    <small class="text-muted">By Anita Patel • August 12, 2024</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="blogModal4" tabindex="-1" aria-labelledby="blogModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="blogModal4Label">Beach Cleanup Initiatives for Ocean Health</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/seminar.jpg" class="img-fluid mb-3" alt="Seminar">
+                    <p>Ecolizer's beach cleanup campaigns are vital in safeguarding Odisha's pristine coastlines from plastic menace. In partnership with NGOs and corporates, we've removed over 10 tons of ocean-bound waste annually through organized drives, preventing marine ecosystem damage and protecting biodiversity. These efforts combine physical cleanups with data tracking to measure impact and guide policy.</p>
+                    <p>Our holistic programs engage schools, volunteers, and businesses in awareness seminars and hands-on activities, fostering a culture of coastal stewardship. For clients in tourism, fisheries, or real estate, our services ensure compliant, eco-friendly operations that enhance brand reputation. Ecolizer turns environmental challenges into collaborative successes—join our coastal protection network.</p>
+                    <p>Client Perks: CSR fulfillment, positive PR, and access to certified green initiatives. Let's keep Odisha's beaches thriving with Ecolizer's expertise.</p>
+                    <small class="text-muted">By Priya Sharma • July 5, 2024</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="blogModal5" tabindex="-1" aria-labelledby="blogModal5Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="blogModal5Label">Circular Economy: Turning Waste into Wealth</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/working_with_waste.jpg" class="img-fluid mb-3" alt="Working with waste">
+                    <p>Ecolizer embodies the circular economy by achieving an impressive 90% material recovery rate, converting urban waste into high-value recyclables that fuel industries like packaging and construction. This closed-loop system drastically cuts landfill use by 80%, conserves natural resources, and unlocks revenue streams—our clients report up to 40% cost savings on raw materials.</p>
+                    <p>Utilizing state-of-the-art sorting facilities and upcycling innovations, we process diverse waste streams into certified products. For businesses seeking sustainable supply chains, Ecolizer offers end-to-end solutions that align with global ESG standards. Embrace circularity with us and turn waste into a competitive advantage.</p>
+                    <p>Advantages for Clients: Cost efficiencies, regulatory compliance, and enhanced sustainability profiles. Partner with Ecolizer to lead the circular revolution in Odisha.</p>
+                    <small class="text-muted">By Soubhagya Chandra Biswal • June 20, 2024</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="blogModal6" tabindex="-1" aria-labelledby="blogModal6Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="blogModal6Label">Smart Waste Management: Future of Urban Sanitation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/waste_loaded_truck_for_recycle.jpg" class="img-fluid mb-3" alt="Waste loaded truck">
+                    <p>Ecolizer is shaping the future of urban sanitation with AI-powered smart waste systems. Our platforms leverage machine learning for predictive route optimization, reducing collection times by 35% and fuel costs accordingly. Intelligent sorting at source and facility levels ensures higher recovery rates and minimal contamination.</p>
+                    <p>By analyzing real-time data on waste patterns and urban growth, we enable municipalities to plan proactively, avoiding overflows and enhancing service reliability. Businesses benefit from integrated analytics dashboards for compliance reporting and efficiency gains. Ecolizer's smart solutions are designed for scalability—future-proof your city's waste infrastructure today.</p>
+                    <p>Key Gains: Operational savings, data-driven insights, and resilient urban ecosystems. Collaborate with Ecolizer to pioneer smart sanitation in your community.</p>
+                    <small class="text-muted">By Rajesh Kumar • May 15, 2024</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="blogModal7" tabindex="-1" aria-labelledby="blogModal7Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="blogModal7Label">Building Resilient Communities Through Waste Management</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/with_ground_members_photo.jpg" class="img-fluid mb-3" alt="With ground members">
+                    <p>Ecolizer builds resilient communities by integrating waste management with grassroots engagement across Odisha's urban hubs. Our strategies have improved public health metrics by 50% in partnered areas, reducing disease vectors and promoting cleaner living spaces. Community-led programs cultivate ownership, turning residents into active stewards of sustainability.</p>
+                    <p>Featuring door-to-door education, youth workshops, and local job creation (over 1,000 positions filled), our approach drives economic vitality while advancing SDGs. For NGOs and corporates, Ecolizer offers customized community modules that amplify impact and ROI. Strengthen your locality's resilience—partner with us for transformative waste initiatives.</p>
+                    <p>Partner Benefits: Job creation, health improvements, and strong community ties. Ecolizer: Empowering Odisha one neighborhood at a time.</p>
+                    <small class="text-muted">By Anita Patel • April 10, 2024</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="blogModal8" tabindex="-1" aria-labelledby="blogModal8Label" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="blogModal8Label">Plastic Waste: Challenges and Solutions in Odisha</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="images/contract_signs.jpg" class="img-fluid mb-3" alt="Contract signs">
+                    <p>Odisha's plastic waste crisis demands bold action, and Ecolizer delivers with advanced recycling tech that processes 5 tons daily into premium granules for manufacturing. Our end-to-end system—from curbside collection to policy-influenced sorting—boosts recycling rates by 60%, curbing pollution and creating a circular supply chain.</p>
+                    <p>Through advocacy with state bodies and school campaigns reaching 10,000+ students, we drive behavioral change and sustainable alternatives like biodegradable packaging. Clients in FMCG and retail gain from reliable recycled inputs, cost savings, and eco-certifications. Ecolizer's plastic solutions are your pathway to plastic-neutral operations.</p>
+                    <p>Strategic Wins: Supply chain sustainability, waste reduction, and innovation leadership. Sign on with Ecolizer to conquer plastic challenges effectively.</p>
+                    <small class="text-muted">By Priya Sharma • March 25, 2024</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

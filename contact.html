@@ -30,22 +30,29 @@
                     <li class="nav-item"><a class="nav-link modern-nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link modern-nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link modern-nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link modern-nav-link" href="blogs.html">Blogs</a></li>
                     <li class="nav-item"><a class="nav-link modern-nav-link" href="team.html">Team</a></li>
                     <li class="nav-item"><a class="nav-link modern-nav-link" href="testimonials.html">Clients</a></li>
-                    <li class="nav-item"><a class="nav-link modern-nav-link" href="blogs.html">Blogs</a></li>
                     <li class="nav-item"><a class="nav-link modern-nav-link active" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-5 bg-light section-transition">
+    <!-- Contact Hero -->
+    <section id="contact-hero" class="py-5 bg-light section-transition">
         <div class="container">
-            <h2 class="text-center mb-5">Contact Us</h2>
+            <h1 class="text-center display-4 fw-bold text-success mb-4">Get In Touch</h1>
+            <p class="text-center lead">Ready to transform your waste management? Contact us today for sustainable solutions tailored to your needs.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 section-transition">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-6 mb-4">
-                    <h4>Get in Touch</h4>
+                    <h4 class="mb-4">Send us a Message</h4>
                     <form id="contact-form" action="https://formsubmit.co/soubhagyachandrabiswal@gmail.com" method="POST">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
@@ -57,20 +64,179 @@
                             <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
                         </div>
                         <div class="mb-3">
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your Phone (Optional)">
+                        </div>
+                        <div class="mb-3">
+                            <select class="form-control" id="service" name="service">
+                                <option value="">Select Service of Interest</option>
+                                <option value="waste-management">Waste Management</option>
+                                <option value="iot-collection">IoT-based Collection</option>
+                                <option value="value-extraction">Value Extraction</option>
+                                <option value="consulting">Consulting</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
                             <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <button type="submit" class="btn btn-success btn-lg">Send Message</button>
                     </form>
                 </div>
                 <div class="col-lg-6">
-                    <h4>Office Location</h4>
-                    <p><i class="fas fa-map-marker-alt"></i> Cuttack, Odisha</p>
-                    <p><i class="fas fa-phone"></i> +91 8093738918</p>
-                    <p><i class="fas fa-envelope"></i> soubhagyachandrabiswal@gmail.com</p>
-                    <div class="mt-4">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1!2d-73.9!3d40.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDAuNzAwMDAw!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <h4 class="mb-4">Contact Information</h4>
+                    <div class="contact-cards">
+                        <div class="contact-card mb-4">
+                            <i class="fas fa-map-marker-alt fa-2x text-success mb-3"></i>
+                            <h5>Office Address</h5>
+                            <p>Cuttack, Odisha, India</p>
+                            <p>PIN: 753001</p>
+                        </div>
+                        <div class="contact-card mb-4">
+                            <i class="fas fa-phone fa-2x text-success mb-3"></i>
+                            <h5>Phone</h5>
+                            <p>+91 8093738918</p>
+                            <p>Mon-Fri: 9:00 AM - 6:00 PM IST</p>
+                        </div>
+                        <div class="contact-card mb-4">
+                            <i class="fas fa-envelope fa-2x text-success mb-3"></i>
+                            <h5>Email</h5>
+                            <p>soubhagyachandrabiswal@gmail.com</p>
+                            <p>We respond within 24 hours</p>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Hours -->
+    <section id="office-hours" class="py-5 bg-light section-transition">
+        <div class="container">
+            <h2 class="text-center mb-5">Office Hours</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-clock fa-3x text-success mb-3"></i>
+                            <h5 class="card-title">Business Hours</h5>
+                            <ul class="list-unstyled">
+                                <li><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</li>
+                                <li><strong>Saturday:</strong> 9:00 AM - 2:00 PM</li>
+                                <li><strong>Sunday:</strong> Closed</li>
+                            </ul>
+                            <p class="text-muted">Emergency services available 24/7 for existing clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map -->
+    <section id="location" class="py-5 section-transition">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Location</h2>
+            <div class="row">
+                <div class="col-12">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.675!2d85.8305!3d20.4625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190dd0b5c7a7b7%3A0x5c6b4c4c4c4c4c4c!2sCuttack%2C%20Odisha!5e0!3m2!1sen!2sin!4v1690000000000!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ecolizer office location in Cuttack, Odisha"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-5 bg-light section-transition">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            What services does Ecolizer provide?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Ecolizer provides comprehensive waste management solutions including IoT-based collection, workforce management, maximum value extraction, and sustainable waste processing for municipalities and businesses.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            How does IoT-based collection work?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our IoT system uses smart sensors and GPS tracking for real-time monitoring of waste collection vehicles, optimizing routes and ensuring efficient, timely service delivery.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            What is your service area?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We currently serve 22+ Urban Local Bodies across Odisha, with plans to expand to other states. Contact us to check service availability in your area.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            How can I partner with Ecolizer?
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We welcome partnerships with municipalities, NGOs, businesses, and community organizations. Contact us to discuss collaboration opportunities in waste management and sustainability.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                            What is the Trashback platform?
+                        </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Trashback is our digital platform connecting scrap dealers with real-time data, credit facilities, and market insights to help them grow their businesses sustainably.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media -->
+    <section id="social" class="py-5 section-transition">
+        <div class="container text-center">
+            <h2 class="mb-4">Follow Us</h2>
+            <p class="lead mb-4">Stay connected for the latest updates on sustainable waste management and environmental initiatives.</p>
+            <div class="social-links">
+                <a href="#" class="btn btn-outline-success btn-lg me-3" aria-label="Facebook">
+                    <i class="fab fa-facebook-f fa-2x"></i>
+                </a>
+                <a href="#" class="btn btn-outline-success btn-lg me-3" aria-label="Twitter">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+                <a href="#" class="btn btn-outline-success btn-lg me-3" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in fa-2x"></i>
+                </a>
+                <a href="#" class="btn btn-outline-success btn-lg me-3" aria-label="Instagram">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a href="#" class="btn btn-outline-success btn-lg" aria-label="YouTube">
+                    <i class="fab fa-youtube fa-2x"></i>
+                </a>
             </div>
         </div>
     </section>
