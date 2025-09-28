@@ -110,28 +110,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Contact form handling with animation
+    // Contact form handling
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
 
             // Simple form validation
-            if (name && email && message) {
-                // Add success animation
-                contactForm.style.animation = 'pulse 0.5s ease';
-                setTimeout(() => {
-                    alert('Thank you for your message! We\'ll get back to you soon.');
-                    contactForm.reset();
-                    contactForm.style.animation = '';
-                }, 500);
-            } else {
+            if (!name || !email || !message) {
+                e.preventDefault();
                 alert('Please fill in all fields.');
             }
+            // If valid, let the form submit to formsubmit.co
         });
+    }
+
+    // Check if redirected back after successful submission
+    if (window.location.search === '?submitted=true') {
+        alert('Thank you for your message! We\'ll get back to you soon.');
     }
 
     // Navbar background change on scroll with blur and animations

@@ -7,4 +7,5 @@
 - [x] Update Team section: Update to Soubhagya Chandra Biswal as Founder/CEO.
 - [x] Update Contact section: Update address (Cuttack, Odisha), phone (8093738918), email (soubhagyachandrabiswal@gmail.com).
 - [x] Update Footer: Update copyright to 2024.
+- [x] Integrate contact form with formsubmit.co to collect data via email.
 - [x] Test the website by opening index.html in a browser.
