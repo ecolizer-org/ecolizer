@@ -45,13 +45,43 @@
                     <li class="nav-item"><a class="nav-link modern-nav-link" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link modern-nav-link" href="projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link modern-nav-link" href="blogs.html">Blogs</a></li>
-                    <li class="nav-item"><a class="nav-link modern-nav-link" href="team.html">Team</a></li>
-                    <li class="nav-item"><a class="nav-link modern-nav-link" href="testimonials.html">Clients</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link modern-nav-link" href="team.html">Team</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link modern-nav-link" href="testimonials.html">Clients</a></li> -->
                     <li class="nav-item"><a class="nav-link modern-nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="breadcrumb" class="py-3 bg-light">
+        <div class="container">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">About</li>
+            </ol>
+        </div>
+    </nav>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ecolizer.org"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://ecolizer.org/about.html"
+        }
+      ]
+    }
+    </script>
 
     <!-- Hero About Section -->
     <section id="about-hero" class="py-5 bg-light section-transition">
@@ -113,7 +143,7 @@
                             <div class="timeline-marker bg-success"></div>
                             <div class="timeline-content">
                                 <h4>2021 - First Partnerships</h4>
-                                <p>Collaborated with Urban Local Bodies (ULBs) to implement end-to-end municipal solid waste management solutions.</p>
+                                <p>Collaborated with Urban Local Bodies (ULBs) to implement end-to-end <a href="services.html">municipal solid waste management</a> solutions.</p>
                                 <img src="images/metting_with_municipalty.jpg" alt="Meeting with municipality" class="img-fluid rounded mt-3">
                             </div>
                         </div>
