@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://ecolizer.com/sitemap.xml
+Sitemap: https://ecolizer.org/sitemap.xml
