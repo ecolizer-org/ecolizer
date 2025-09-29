@@ -45,7 +45,7 @@
                     <li class="nav-item"><a class="nav-link modern-nav-link active" href="services.html">Services</a></li>
                     <li class="nav-item"><a class="nav-link modern-nav-link" href="projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link modern-nav-link" href="blogs.html">Blogs</a></li>
-                    <li class="nav-item"><a class="nav-link modern-nav-link" href="team.html">Team</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link modern-nav-link" href="team.html">Team</a></li> -->
                     <li class="nav-item"><a class="nav-link modern-nav-link" href="testimonials.html">Clients</a></li>
                     <li class="nav-item"><a class="nav-link modern-nav-link" href="contact.html">Contact</a></li>
                 </ul>
@@ -53,10 +53,130 @@
         </div>
     </nav>
 
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="breadcrumb" class="py-3 bg-light">
+        <div class="container">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Services</li>
+            </ol>
+        </div>
+    </nav>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ecolizer.org"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://ecolizer.org/services.html"
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Workforce Management",
+      "description": "Enabling SHG women to move into managerial roles and entrepreneurship through comprehensive training and support programs.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Ecolizer Ventures LLP"
+      },
+      "areaServed": "Odisha",
+      "serviceType": "Workforce Development"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "IoT-based Collection",
+      "description": "Revolutionary door-to-door waste collection using advanced IoT technology for efficient, real-time waste management.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Ecolizer Ventures LLP"
+      },
+      "areaServed": "Odisha",
+      "serviceType": "Waste Collection"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Maximum Value Extraction",
+      "description": "Advanced material recovery processes ensuring 90% material recovery from dry waste for optimal economic and environmental value.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Ecolizer Ventures LLP"
+      },
+      "areaServed": "Odisha",
+      "serviceType": "Waste Recycling"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What services does Ecolizer provide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ecolizer provides comprehensive waste management solutions including IoT-based collection, workforce management, maximum value extraction, and sustainable waste processing for municipalities and businesses."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does IoT-based collection work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our IoT system uses smart sensors and GPS tracking for real-time monitoring of waste collection vehicles, optimizing routes and ensuring efficient, timely service delivery."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your service area?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We currently serve 22+ Urban Local Bodies across Odisha, with plans to expand to other states. Contact us to check service availability in your area."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I partner with Ecolizer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We welcome partnerships with municipalities, NGOs, businesses, and community organizations. Contact us to discuss collaboration opportunities in waste management and sustainability."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Trashback platform?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trashback is our digital platform connecting scrap dealers with real-time data, credit facilities, and market insights to help them grow their businesses sustainably."
+          }
+        }
+      ]
+    }
+    </script>
+
     <!-- Services Section -->
     <section id="services" class="py-5 bg-light section-transition">
         <div class="container">
-            <h2 class="text-center mb-5">Our Services</h2>
+            <h1 class="text-center mb-5">Our Services</h1>
             <div class="row">
                 <div class="col-lg-4 mb-4">
                     <div class="card h-100 service-card">

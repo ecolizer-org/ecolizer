@@ -53,6 +53,36 @@
         </div>
     </nav>
 
+    <!-- Breadcrumb Navigation -->
+    <nav aria-label="breadcrumb" class="py-3 bg-light">
+        <div class="container">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Team</li>
+            </ol>
+        </div>
+    </nav>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ecolizer.org"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Team",
+          "item": "https://ecolizer.org/team.html"
+        }
+      ]
+    }
+    </script>
+
     <!-- Team Hero -->
     <section id="team-hero" class="py-5 bg-light section-transition">
         <div class="container">
