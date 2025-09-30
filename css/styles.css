@@ -71,7 +71,7 @@
 
 .section-transition:hover {
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(40, 167, 69, 0.3);
+    box-shadow: 0 20px 40px rgba(40, 167, 69, 0.5);
 }
 
 .testimonial-card {
@@ -263,7 +263,7 @@
 
 .timeline-content:hover {
     transform: translateX(10px);
-    box-shadow: 0 5px 20px rgba(40, 167, 69, 0.3);
+    box-shadow: 0 5px 20px rgba(40, 167, 69, 0.5);
 }
 
 /* Achievement Counters */

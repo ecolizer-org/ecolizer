@@ -170,7 +170,7 @@ body {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(40, 167, 69, 0.3);
+    box-shadow: 0 5px 20px rgba(40, 167, 69, 0.5);
 }
 
 .service-card:hover {
@@ -311,7 +311,7 @@ body {
 }
 
 .dark-theme .card:hover {
-    box-shadow: 0 5px 20px rgba(40, 167, 69, 0.3);
+    box-shadow: 0 5px 20px rgba(40, 167, 69, 0.5);
 }
 
 .dark-theme section {
@@ -337,4 +337,18 @@ body {
     background: var(--section-bg);
     color: var(--text-color);
     border: 1px solid var(--border-color);
+}
+
+.dark-theme .modal-content {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.dark-theme .modal-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dark-theme .modal-footer {
+    border-top: 1px solid var(--border-color);
 }
