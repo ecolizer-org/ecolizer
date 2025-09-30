@@ -270,4 +270,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const isDark = document.body.classList.contains('dark-theme');
         setTheme(!isDark);
     });
+
+    // Navbar toggler icon change
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    if (navbarToggler) {
+        navbarToggler.addEventListener('click', function() {
+            const icon = this.querySelector('.fas');
+            setTimeout(() => {
+                if (this.getAttribute('aria-expanded') === 'true') {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }, 10);
+        });
+    }
 });
