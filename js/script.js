@@ -25,7 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Crow mascot click event
-    crowMascot.addEventListener('click', guideToNextSection);
+    if (crowMascot) {
+        crowMascot.addEventListener('click', guideToNextSection);
+    }
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -88,13 +90,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Particle effect for hero section
     function createParticles() {
         const heroSection = document.querySelector('.hero-section');
-        for (let i = 0; i < 50; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 10 + 's';
-            particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-            heroSection.appendChild(particle);
+        if (heroSection) {
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 10 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                heroSection.appendChild(particle);
+            }
         }
     }
 
@@ -168,11 +172,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Crow mascot follows scroll slightly with enhanced movement
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
-        crowMascot.style.transform = `translateY(${rate}px) rotate(${scrolled * 0.01}deg)`;
-    });
+    if (crowMascot) {
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            crowMascot.style.transform = `translateY(${rate}px) rotate(${scrolled * 0.01}deg)`;
+        });
+    }
 
     // Add hover effects to cards
     document.querySelectorAll('.card').forEach(card => {
@@ -185,7 +191,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Initialize crow tooltip
-    updateCrowTooltip('Click me to explore the site!');
+    if (crowMascot) {
+        updateCrowTooltip('Click me to explore the site!');
+    }
 
     // Counter animation for achievements
     function animateCounters() {
@@ -229,4 +237,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
         achievementsObserver.observe(achievementsSection);
     }
+
+    // Theme toggle functionality
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = themeToggle.querySelector('i');
+
+    // Function to set theme
+    function setTheme(isDark) {
+        if (isDark) {
+            document.body.classList.add('dark-theme');
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.body.classList.remove('dark-theme');
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+            localStorage.setItem('theme', 'light');
+        }
+    }
+
+    // Load theme on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        setTheme(true);
+    } else {
+        setTheme(false);
+    }
+
+    // Toggle theme on button click
+    themeToggle.addEventListener('click', () => {
+        const isDark = document.body.classList.contains('dark-theme');
+        setTheme(!isDark);
+    });
 });
