@@ -114,26 +114,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Contact form handling
+// Contact form handling is managed in contact.html via the Google Form submission script.
+    // Prevent default browser submission so the page does not reload/navigate away.
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-
-            // Simple form validation
-            if (!name || !email || !message) {
-                e.preventDefault();
-                alert('Please fill in all fields.');
-            }
-            // If valid, let the form submit to formsubmit.co
+            e.preventDefault();
         });
-    }
-
-    // Check if redirected back after successful submission
-    if (window.location.search === '?submitted=true') {
-        alert('Thank you for your message! We\'ll get back to you soon.');
     }
 
     // Navbar background change on scroll with blur and animations
