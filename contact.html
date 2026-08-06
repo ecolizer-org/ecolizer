@@ -110,7 +110,7 @@
             <div class="row">
                 <div class="col-lg-6 mb-4">
                     <h4 class="mb-4">Send us a Message</h4>
-<form id="contact-form" novalidate>
+<form id="contact-form">
                         <div class="mb-3">
                             <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
                         </div>
@@ -329,30 +329,21 @@
                 }
             }
 
-            if (form && statusEl) {
+if (form && statusEl) {
                 form.addEventListener('submit', function (e) {
                     e.preventDefault();
 
-                    var nameEl = document.getElementById('name');
-                    var emailEl = document.getElementById('email');
-var contactEl = document.getElementById('phone');
-                    var messageEl = document.getElementById('message');
-
-                    // Basic client-side validation
-                    if (!nameEl.value || !emailEl.value || !contactEl.value || !messageEl.value) {
-                        showStatus('Please fill in all fields.', true);
-                        return;
-                    }
-                    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) {
-                        showStatus('Please enter a valid email address.', true);
-                        return;
-                    }
+                    // Read values directly from the form's named fields
+                    var name = (form.elements['name'] && form.elements['name'].value || '').trim();
+                    var email = (form.elements['email'] && form.elements['email'].value || '').trim();
+                    var contact = (form.elements['phone'] && form.elements['phone'].value || '').trim();
+                    var message = (form.elements['message'] && form.elements['message'].value || '').trim();
 
                     var data = new FormData();
-                    data.append('entry.103872005', nameEl.value);      // Name
-                    data.append('entry.1766871485', emailEl.value);    // Email
-                    data.append('entry.1103735479', contactEl.value);  // Contact number
-                    data.append('entry.92576227', messageEl.value);    // Message
+                    data.append('entry.103872005', name);      // Name
+                    data.append('entry.1766871485', email);    // Email
+                    data.append('entry.1103735479', contact);  // Contact number
+                    data.append('entry.92576227', message);    // Message
 
                     // Fire-and-forget background POST (no-cors avoids blocking the page)
                     fetch(googleFormUrl, { method: 'POST', body: data, mode: 'no-cors' })
