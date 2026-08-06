@@ -329,7 +329,7 @@
                 }
             }
 
-if (form && statusEl) {
+            if (form && statusEl) {
                 form.addEventListener('submit', function (e) {
                     e.preventDefault();
 
@@ -339,21 +339,42 @@ if (form && statusEl) {
                     var contact = (form.elements['phone'] && form.elements['phone'].value || '').trim();
                     var message = (form.elements['message'] && form.elements['message'].value || '').trim();
 
-                    var data = new FormData();
-                    data.append('entry.103872005', name);      // Name
-                    data.append('entry.1766871485', email);    // Email
-                    data.append('entry.1103735479', contact);  // Contact number
-                    data.append('entry.92576227', message);    // Message
+                    // Create a hidden iframe to receive the form POST without navigating the page
+                    var frameName = 'google-form-frame';
+                    var iframe = document.getElementById(frameName);
+                    if (!iframe) {
+                        iframe = document.createElement('iframe');
+                        iframe.id = frameName;
+                        iframe.name = frameName;
+                        iframe.style.display = 'none';
+                        document.body.appendChild(iframe);
+                    }
 
-                    // Fire-and-forget background POST (no-cors avoids blocking the page)
-                    fetch(googleFormUrl, { method: 'POST', body: data, mode: 'no-cors' })
-                        .then(function () {
-                            showStatus('Thank you for your message! We\'ll get back to you soon.');
-                            form.reset();
-                        })
-                        .catch(function () {
-                            showStatus('Sorry, something went wrong. Please try again.', true);
-                        });
+                    // Build a temporary form that POSTs directly to the Google Form endpoint
+                    var tempForm = document.createElement('form');
+                    tempForm.method = 'POST';
+                    tempForm.action = googleFormUrl;
+                    tempForm.target = frameName;
+                    tempForm.style.display = 'none';
+
+                    function addField(fname, fvalue) {
+                        var input = document.createElement('input');
+                        input.type = 'hidden';
+                        input.name = fname;
+                        input.value = fvalue;
+                        tempForm.appendChild(input);
+                    }
+                    addField('entry.103872005', name);      // Name
+                    addField('entry.1766871485', email);    // Email
+                    addField('entry.1103735479', contact);  // Contact number
+                    addField('entry.92576227', message);    // Message
+
+                    document.body.appendChild(tempForm);
+                    tempForm.submit();
+                    tempForm.remove();
+
+                    showStatus('Thank you for your message! We\'ll get back to you soon.');
+                    form.reset();
                 });
             }
         })();
